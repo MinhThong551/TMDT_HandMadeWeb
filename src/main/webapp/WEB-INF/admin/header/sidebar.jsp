@@ -3,6 +3,11 @@
 <%@ page isELIgnored="false" %>
 
 <html>
+<style>
+    .sidebar-offcanvas {
+        color: #000000;
+    }
+</style>
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
 
@@ -104,7 +109,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-sale"></i>
               </span>
-                <span class="menu-title">Quản lý vouncher</span>
+                <span class="menu-title">Quản lý voucher</span>
             </a>
         </li>
         <li class="nav-item menu-items">
