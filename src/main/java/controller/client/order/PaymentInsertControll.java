@@ -1,10 +1,7 @@
 package controller.client.order;
 
 import dao.client.OrderDAO;
-import model.Account;
-import model.Cart;
-import model.Order;
-import model.OrderDetail;
+import model.*;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,33 +13,67 @@ import java.util.List;
 public class PaymentInsertControll extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
+        // Thiết lập mã hóa
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
 
         HttpSession session = request.getSession();
 
+        // Lấy dữ liệu từ session
         Account account = (Account) session.getAttribute("account");
         Order order = (Order) session.getAttribute("bill");
         List<OrderDetail> orderDetail = (List<OrderDetail>) session.getAttribute("billDetail");
 
-        if (order != null && order != null) {
-            OrderDAO.insertOrder(order);
-            OrderDAO.setCurrentIdBill(order);
-            for (OrderDetail od : orderDetail) {
-                od.setOrder(order);
-                OrderDAO.insertOrderdetail(od);
+        // Lấy phương thức thanh toán từ form
+        String paymentMethodParam = request.getParameter("paymentMethod");
+
+        if (order != null && orderDetail != null && paymentMethodParam != null) {
+            try {
+                // Gán payment_id vào Order
+                int paymentId;
+                if (paymentMethodParam.equals("cod")) {
+                    paymentId = 1; // Thanh toán khi nhận hàng
+                } else if (paymentMethodParam.equals("qr")) {
+                    paymentId = 2; // Quét mã QR
+                } else {
+                    throw new IllegalArgumentException("Phương thức thanh toán không hợp lệ");
+                }
+
+                Payment payment = new Payment();
+                payment.setId(paymentId);
+                order.setPayment(payment);
+
+                // Insert đơn hàng vào DB
+                OrderDAO.insertOrder(order);
+                OrderDAO.setCurrentIdBill(order); // Gán id cho order
+
+                // Insert chi tiết đơn hàng
+                for (OrderDetail od : orderDetail) {
+                    od.setOrder(order); // Gán lại order có id
+                    OrderDAO.insertOrderdetail(od);
+                }
+
+                // Xóa giỏ hàng cookie
+                Cart.deleteCartToCookies(request, response, account.getId());
+
+                // Reset size giỏ hàng
+                session.setAttribute("size", 0);
+
+                // Điều hướng đến trang thông báo thành công
+                response.sendRedirect(request.getContextPath() + "/CheckOutSuccessControll");
+            } catch (Exception e) {
+                e.printStackTrace();
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Lỗi khi xử lý thanh toán");
             }
-            Cart.deleteCartToCookies(request, response, account.getId());
-            session.setAttribute("size", 0);
-            response.sendRedirect(request.getContextPath() + "/CheckOutSuccessControll");
         } else {
+            // Nếu thiếu thông tin thì quay lại trang thanh toán
+            request.setAttribute("error", "Thiếu thông tin đơn hàng hoặc phương thức thanh toán");
             request.getRequestDispatcher("/WEB-INF/client/payment.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request, response); // Cho phép xử lý cả bằng POST nếu cần
     }
 }

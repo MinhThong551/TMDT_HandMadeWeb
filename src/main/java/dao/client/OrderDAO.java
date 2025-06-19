@@ -264,6 +264,11 @@ public class OrderDAO {
             ps.setString(9, order.getOrderNotes());
             ps.setString(10, order.getOrderStatus());
             ps.setInt(11, order.getPayment().getId());
+            if (order.getPayment() == null) {
+                System.out.println("❌ Payment object là null");
+            } else {
+                System.out.println("✅ Payment ID gửi lên là: " + order.getPayment().getId());
+            }
             ps.executeUpdate();
             System.out.println("insert order success");
         } catch (Exception e) {
