@@ -264,6 +264,12 @@
                                         <input type="radio" id="cod" name="paymentMethod" value="cod">
                                         <label for="cod">Thanh toán khi nhận hàng</label>
                                     </div>
+
+                                    <div class="radio-item">
+                                        <input type="radio" id="momo" name="paymentMethod" value="momo">
+                                        <label for="momo">Thanh toán qua Ví MoMo</label>
+                                    </div>
+
                                 </div>
                                 <div class="error-message" id="payment-error"></div>
                             </div>
@@ -305,20 +311,20 @@
         const qr = document.getElementById('qr');
         const credit = document.getElementById('credit');
         const cod = document.getElementById('cod');
+        const momo = document.getElementById('momo');
         const paymentError = document.getElementById('payment-error');
         let valid = true;
 
-        if (qr) {
-            if (credit.checked || cod.checked) {
-                paymentError.textContent = '';
-            } else {
-                paymentError.textContent = 'Vui lòng chọn một hình thức thanh toán';
-                valid = false;
-            }
-            if(qr.checked){
-                paymentError.textContent = 'Vui lòng quét mã';
-                valid = false;
-            }
+        if (!(qr.checked || cod.checked || momo.checked)) {
+            paymentError.textContent = 'Vui lòng chọn một hình thức thanh toán';
+            valid = false;
+        } else {
+            paymentError.textContent = '';
+        }
+
+        if (qr.checked) {
+            paymentError.textContent = 'Vui lòng quét mã';
+            valid = false;
         }
         return valid;
 
