@@ -30,6 +30,7 @@ public class AddProductControll extends HttpServlet {
 			throws ServletException, IOException {
 		List<Category> cateList = ProductDAO.getListCategory();
 		request.setAttribute("catelist", cateList);
+		request.setAttribute("page", "products");
 		request.getRequestDispatcher("WEB-INF/admin/add-product.jsp").forward(request, response);
 	}
 

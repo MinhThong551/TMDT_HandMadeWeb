@@ -18,6 +18,7 @@
 		.content-wrapper,
 		.main-panel,
 		.card,
+		.card-title,
 		.navbar,
 		.sidebar,
 		.table,

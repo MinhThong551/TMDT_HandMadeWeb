@@ -8,174 +8,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Edit Product</title>
     <jsp:include page="./link/link.jsp"></jsp:include>
-	<style>
-		body,
-		.container-scroller,
-		.content-wrapper,
-		.main-panel,
-		.card,
-		.navbar,
-		.sidebar,
-		.table,
-		.footer {
-			background-color: #ffffff !important;
-			color: #000000 !important;
-		}
+    <style>
+        body,
+        .container-scroller,
+        .content-wrapper,
+        .main-panel,
+        .card,
+        .navbar,
+        .sidebar,
+        .table,
+        .footer {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
 
-		.bg-gray-dark {
-			background-color: #f0f0f0 !important;
-			color: #000000 !important;
-		}
+        .bg-gray-dark {
+            background-color: #f0f0f0 !important;
+            color: #000000 !important;
+        }
 
-		.text-muted {
-			color: #666666 !important;
-		}
+        .text-muted {
+            color: #666666 !important;
+        }
 
-		.btn,
-		.btn-success,
-		.btn-danger,
-		.btn-warning {
-			color: white !important;
-		}
+        .btn,
+        .btn-success,
+        .btn-danger,
+        .btn-warning {
+            color: white !important;
+        }
 
-		.sidebar,
-		.navbar {
-			background-color: #eaeaea !important;
-		}
+        .sidebar,
+        .navbar {
+            background-color: #eaeaea !important;
+        }
 
-		.modal-contents {
-			background-color: #ffffff !important;
-			color: #000000 !important;
-		}
+        .modal-contents {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
 
-		input,
-		select,
-		textarea {
-			background-color: #ffffff !important;
-			color: #000000 !important;
-			border: 1px solid #ccc;
-		}
+        input,
+        select,
+        textarea {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: 1px solid #ccc;
+        }
 
-		a {
-			color: #007bff !important;
-		}
+        a {
+            color: #007bff !important;
+        }
 
-		a:hover {
-			color: #0056b3 !important;
-		}
-		.icon-box-success {
-			background-color: #d4edda !important;
-			color: #155724 !important;
-		}
+        a:hover {
+            color: #0056b3 !important;
+        }
 
-		.icon-box-danger {
-			background-color: #f8d7da !important;
-			color: #721c24 !important;
-		}
+        .icon-box-success {
+            background-color: #d4edda !important;
+            color: #155724 !important;
+        }
 
-		.icon-item {
-			color: #000 !important;
-		}
+        .icon-box-danger {
+            background-color: #f8d7da !important;
+            color: #721c24 !important;
+        }
 
-		.form-group label {
-			color: #1c1616;
-		}
-		.form-group input {
-			background-color: rgba(255, 255, 255, 0.86);
-			color: black;
-			transition: none; /* Loại bỏ transition để không thay đổi màu khi blur */
-		}
+        .icon-item {
+            color: #000 !important;
+        }
 
-		.form-group input:focus {
-			background-color: rgba(255, 255, 255, 0.86); /* Màu nền khi có tiêu điểm */
-			color: black; /* Màu chữ khi có tiêu điểm */
-		}
-		.form-group textarea {
-			background-color: rgba(255, 255, 255, 0.86);
-			color: black;
-			transition: none; /* Loại bỏ transition để không thay đổi màu khi blur */
-		}
+        .form-group label {
+            color: #1c1616;
+        }
 
-		.form-group textarea:focus {
-			background-color: rgba(255, 255, 255, 0.86); /* Màu nền khi có tiêu điểm */
-			color: black; /* Màu chữ khi có tiêu điểm */
-		}
-		.btn-upload {
-			background-color: whitesmoke;
-			width: 200px;
-			height: 35px;
-			border-radius: 10px;
-			cursor: pointer; /* Con trỏ khi rê chuột */
-			transition: opacity 0.3s ease; /* Hiệu ứng chuyển đổi độ mờ */
-		}
+        .form-group input {
+            background-color: rgba(255, 255, 255, 0.86);
+            color: black;
+            transition: none; /* Loại bỏ transition để không thay đổi màu khi blur */
+        }
 
-		.btn-upload:hover {
-			opacity: 0.8; /* Giảm độ mờ khi hover */
-		}
+        .form-group input:focus {
+            background-color: rgba(255, 255, 255, 0.86); /* Màu nền khi có tiêu điểm */
+            color: black; /* Màu chữ khi có tiêu điểm */
+        }
 
-		.btn-custom {
-			background-color: #1c1616; /* Màu nền đen */
-			color: #ffc107; /* Màu chữ vàng */
-			border: none; /* Bỏ viền */
-			padding: 10px 20px; /* Khoảng cách bên trong */
-			cursor: pointer; /* Con trỏ khi rê chuột */
-			border-radius: 4px; /* Bo góc */
-			display: inline-flex; /* Hiển thị dưới dạng khối nội tuyến với các phần tử con */
-			align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
-			transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
-		}
+        .form-group textarea {
+            background-color: rgba(255, 255, 255, 0.86);
+            color: black;
+            transition: none; /* Loại bỏ transition để không thay đổi màu khi blur */
+        }
 
-		.btn-custom:hover {
-			background-color: #333; /* Màu nền khi hover */
-		}
+        .form-group textarea:focus {
+            background-color: rgba(255, 255, 255, 0.86); /* Màu nền khi có tiêu điểm */
+            color: black; /* Màu chữ khi có tiêu điểm */
+        }
 
-		.btn-custom img {
-			margin-left: 10px; /* Khoảng cách bên trái của hình ảnh */
-		}
-	</style>
+        .btn-upload {
+            background-color: whitesmoke;
+            width: 200px;
+            height: 35px;
+            border-radius: 10px;
+            cursor: pointer; /* Con trỏ khi rê chuột */
+            transition: opacity 0.3s ease; /* Hiệu ứng chuyển đổi độ mờ */
+        }
+
+        .btn-upload:hover {
+            opacity: 0.8; /* Giảm độ mờ khi hover */
+        }
+
+        .btn-custom {
+            background-color: #1c1616; /* Màu nền đen */
+            color: #ffc107; /* Màu chữ vàng */
+            border: none; /* Bỏ viền */
+            padding: 10px 20px; /* Khoảng cách bên trong */
+            cursor: pointer; /* Con trỏ khi rê chuột */
+            border-radius: 4px; /* Bo góc */
+            display: inline-flex; /* Hiển thị dưới dạng khối nội tuyến với các phần tử con */
+            align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+            transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+        }
+
+        .btn-custom:hover {
+            background-color: #333; /* Màu nền khi hover */
+        }
+
+        .btn-custom img {
+            margin-left: 10px; /* Khoảng cách bên trái của hình ảnh */
+        }
+    </style>
 </head>
 <body>
 <div class="container-scroller">
-	<jsp:include page="header/sidebar.jsp"></jsp:include>
-	<div class="container-fluid page-body-wrapper">
-		<jsp:include page="./header/navbar.jsp"></jsp:include>
-		<div class="main-panel">
-			<div class="content-wrapper">
-				<div class="container-fluid">
+    <jsp:include page="header/sidebar.jsp">
+        <jsp:param name="page" value="${page}"/>
+    </jsp:include>
+    <div class="container-fluid page-body-wrapper">
+        <jsp:include page="./header/navbar.jsp"></jsp:include>
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body" style="background-color: whitesmoke">
+                                    <div class="card-title" style="color: black">Nhập kho</div>
+                                    <hr>
+                                    <c:url var="addP" value="AddProductControll"></c:url>
+                                    <p>
+                                        <button class="btn-upload"><a href="/UploadExcel">Nhập bằng file excel</a>
+                                        </button>
+                                    </p>
+                                    <div id="formContainer">
+                                        <form id="productForm" action="AddProductControll" method="post"
+                                              enctype="multipart/form-data">
+                                            <input type="hidden" id="productsAdded" name="productsAdded" value="false">
 
-					<div class="row mt-3">
-						<div class="col-lg-12">
-							<div class="card">
-								<div class="card-body" style="background-color: whitesmoke">
-									<div class="card-title" style="color: black">Nhập kho</div>
-									<hr>
-									<c:url var="addP" value="AddProductControll"></c:url>
-									<p><button class="btn-upload"><a  href="/UploadExcel">Nhập bằng file excel</a>
-									</button></p>
-									<div id="formContainer">
-										<form id="productForm" action="AddProductControll" method="post" enctype="multipart/form-data">
-											<input type="hidden" id="productsAdded" name="productsAdded" value="false">
+                                            <div id="productFields">
+                                                <!-- Các trường sản phẩm sẽ được thêm vào đây -->
+                                            </div>
+                                            <button type="button" class="btn-custom" onclick="addProductFields()">Thêm
+                                                sản phẩm
+                                                <img src="./images/plus.png" style="width: 20px;height: 20px"></button>
+                                            <button type="submit" class="btn-custom">Nhập kho
+                                                <img src="./images/house.png" style="width: 20px;height: 20px"></button>
+                                            <span id="errorMessage" style="color: red; display: none;">Vui lòng chọn phương thức nhập kho</span>
 
-											<div id="productFields">
-												<!-- Các trường sản phẩm sẽ được thêm vào đây -->
-											</div>
-											<button type="button" class="btn-custom" onclick="addProductFields()">Thêm sản phẩm
-												<img src="./images/plus.png" style="width: 20px;height: 20px"></button>
-											<button type="submit" class="btn-custom">Nhập kho
-												<img src="./images/house.png" style="width: 20px;height: 20px"></button>
-											<span id="errorMessage" style="color: red; display: none;">Vui lòng chọn phương thức nhập kho</span>
+                                        </form>
+                                        <script>
+                                            let productCounter = 0;
 
-										</form>
-										<script>
-											let productCounter = 0;
+                                            function addProductFields() {
+                                                productCounter++;
 
-											function addProductFields() {
-												productCounter++;
-
-												const productFields = document.getElementById('productFields');
-												const newProductFields = document.createElement('div');
-												newProductFields.className = 'product-fields';
-												newProductFields.innerHTML = `
+                                                const productFields = document.getElementById('productFields');
+                                                const newProductFields = document.createElement('div');
+                                                newProductFields.className = 'product-fields';
+                                                newProductFields.innerHTML = `
   <div class="row">
                 <div class="col-md-3">
                    <div class="form-group">
@@ -269,380 +278,385 @@
             </div>
 
         `;
-												productFields.appendChild(newProductFields);
-											}
+                                                productFields.appendChild(newProductFields);
+                                            }
 
-											function validateImage(input) {
-												var error = input.nextElementSibling;
-												if (input.files.length === 0) {
-													error.textContent = "Vui lòng chọn một hình ảnh.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateImage(input) {
+                                                var error = input.nextElementSibling;
+                                                if (input.files.length === 0) {
+                                                    error.textContent = "Vui lòng chọn một hình ảnh.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateListImage(input) {
-												var error = input.nextElementSibling;
-												if (input.files.length === 0) {
-													error.textContent = "Vui lòng chọn ít nhất một hình ảnh.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateListImage(input) {
+                                                var error = input.nextElementSibling;
+                                                if (input.files.length === 0) {
+                                                    error.textContent = "Vui lòng chọn ít nhất một hình ảnh.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateName(input) {
-												var ten = input.value;
-												var kyTuHopLe = /^[\p{L}\s']+$/u;
-												var error = input.nextElementSibling;
-												if (ten.length == 0 || ten == null) {
-													error.textContent = "Vui lòng nhập vào tên sản phẩm";
-													error.style.display = "block";
-													return false;
-												} else if (!kyTuHopLe.test(ten)) {
-													error.textContent = "Tên sản phẩm chỉ chứa ký tự chữ cái và khoảng trắng.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateName(input) {
+                                                var ten = input.value;
+                                                var kyTuHopLe = /^[\p{L}\s']+$/u;
+                                                var error = input.nextElementSibling;
+                                                if (ten.length == 0 || ten == null) {
+                                                    error.textContent = "Vui lòng nhập vào tên sản phẩm";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else if (!kyTuHopLe.test(ten)) {
+                                                    error.textContent = "Tên sản phẩm chỉ chứa ký tự chữ cái và khoảng trắng.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validatePrice(input) {
-												var text = input.value;
-												var error = input.nextElementSibling;
-												if (text.length == 0 || text == null) {
-													error.textContent = "Vui lòng nhập vào giá sản phẩm.";
-													error.style.display = "block";
-													return false;
-												} else if (isNaN(text) || text <= 0) {
-													error.textContent = "Giá sản phẩm chỉ chứa chữ số, không âm.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
-											function validateWeight(input) {
-												var text = input.value;
-												var error = input.nextElementSibling;
-												if (text.length == 0 || text == null) {
-													error.textContent = "Vui lòng nhập vào cân nặng sản phẩm.";
-													error.style.display = "block";
-													return false;
-												} else if (isNaN(text) || text <= 0) {
-													error.textContent = "Cân nặng sản phẩm chỉ chứa chữ số, không âm.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
-											function validateDescription(input) {
-												var text = input.value;
-												var error = input.nextElementSibling;
-												if (text.length == 0 || text == null) {
-													error.textContent = "Vui lòng nhập mô tả sản phẩm.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validatePrice(input) {
+                                                var text = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (text.length == 0 || text == null) {
+                                                    error.textContent = "Vui lòng nhập vào giá sản phẩm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else if (isNaN(text) || text <= 0) {
+                                                    error.textContent = "Giá sản phẩm chỉ chứa chữ số, không âm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateNameBatch(input) {
-												var ten = input.value;
-												var error = input.nextElementSibling;
-												if (ten.length == 0 || ten == null) {
-													error.textContent = "Vui lòng nhập vào tên lô hàng.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateWeight(input) {
+                                                var text = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (text.length == 0 || text == null) {
+                                                    error.textContent = "Vui lòng nhập vào cân nặng sản phẩm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else if (isNaN(text) || text <= 0) {
+                                                    error.textContent = "Cân nặng sản phẩm chỉ chứa chữ số, không âm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateNgaySX(input) {
-												var ngayNhapHang = new Date(input.value);
-												var now = new Date();
-												var error = input.nextElementSibling;
-												if (isNaN(ngayNhapHang.getTime())) {
-													error.textContent = "Vui lòng chọn ngày sản xuất.";
-													error.style.display = "block";
-													return false;
-												}
-												if (ngayNhapHang > now) {
-													error.textContent = "Ngày sản xuất phải trước ngày hiện tại.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateDescription(input) {
+                                                var text = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (text.length == 0 || text == null) {
+                                                    error.textContent = "Vui lòng nhập mô tả sản phẩm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateNgayHetHan(input) {
-												var ngayHetHan = new Date(input.value);
-												var now = new Date();
-												var error = input.nextElementSibling;
-												if (isNaN(ngayHetHan.getTime())) {
-													error.textContent = "Vui lòng chọn hạn sử dụng.";
-													error.style.display = "block";
-													return false;
-												}
-												if (ngayHetHan <= now) {
-													error.textContent = "Hạn sử dụng phải sau ngày hiện tại.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateNameBatch(input) {
+                                                var ten = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (ten.length == 0 || ten == null) {
+                                                    error.textContent = "Vui lòng nhập vào tên lô hàng.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateNgayNhapHang(input) {
-												var ngayNhapHang = new Date(input.value);
-												var now = new Date();
-												var error = input.nextElementSibling;
+                                            function validateNgaySX(input) {
+                                                var ngayNhapHang = new Date(input.value);
+                                                var now = new Date();
+                                                var error = input.nextElementSibling;
+                                                if (isNaN(ngayNhapHang.getTime())) {
+                                                    error.textContent = "Vui lòng chọn ngày sản xuất.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                }
+                                                if (ngayNhapHang > now) {
+                                                    error.textContent = "Ngày sản xuất phải trước ngày hiện tại.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-												// Lấy ngày hiện tại và đặt giờ, phút, giây, milliseconds về 0 để so sánh chỉ theo ngày
-												var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                                            function validateNgayHetHan(input) {
+                                                var ngayHetHan = new Date(input.value);
+                                                var now = new Date();
+                                                var error = input.nextElementSibling;
+                                                if (isNaN(ngayHetHan.getTime())) {
+                                                    error.textContent = "Vui lòng chọn hạn sử dụng.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                }
+                                                if (ngayHetHan <= now) {
+                                                    error.textContent = "Hạn sử dụng phải sau ngày hiện tại.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-												// Đặt giờ, phút, giây, milliseconds của ngayNhapHang về 0
-												ngayNhapHang.setHours(0, 0, 0, 0);
+                                            function validateNgayNhapHang(input) {
+                                                var ngayNhapHang = new Date(input.value);
+                                                var now = new Date();
+                                                var error = input.nextElementSibling;
 
-												if (isNaN(ngayNhapHang.getTime())) {
-													error.textContent = "Vui lòng chọn ngày nhập hàng.";
-													error.style.display = "block";
-													return false;
-												}
-												if (ngayNhapHang.getTime() !== today.getTime()) {
-													error.textContent = "Ngày nhập hàng phải là ngày hiện tại.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                                // Lấy ngày hiện tại và đặt giờ, phút, giây, milliseconds về 0 để so sánh chỉ theo ngày
+                                                var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+                                                // Đặt giờ, phút, giây, milliseconds của ngayNhapHang về 0
+                                                ngayNhapHang.setHours(0, 0, 0, 0);
+
+                                                if (isNaN(ngayNhapHang.getTime())) {
+                                                    error.textContent = "Vui lòng chọn ngày nhập hàng.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                }
+                                                if (ngayNhapHang.getTime() !== today.getTime()) {
+                                                    error.textContent = "Ngày nhập hàng phải là ngày hiện tại.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
 
-											function validateQuantity(input) {
-												var soLuongNhap = input.value;
-												var error = input.nextElementSibling;
-												if (soLuongNhap.length == 0 || soLuongNhap == null) {
-													error.textContent = "Vui lòng nhập vào số lượng nhập.";
-													error.style.display = "block";
-													return false;
-												} else if (isNaN(soLuongNhap) || soLuongNhap <= 0) {
-													error.textContent = "Số lượng nhập chỉ chứa chữ số, không âm.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateQuantity(input) {
+                                                var soLuongNhap = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (soLuongNhap.length == 0 || soLuongNhap == null) {
+                                                    error.textContent = "Vui lòng nhập vào số lượng nhập.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else if (isNaN(soLuongNhap) || soLuongNhap <= 0) {
+                                                    error.textContent = "Số lượng nhập chỉ chứa chữ số, không âm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validatePriceImport(input) {
-												var giaNhap = input.value;
-												var error = input.nextElementSibling;
-												if (giaNhap.length == 0 || giaNhap == null) {
-													error.textContent = "Vui lòng nhập vào giá nhập.";
-													error.style.display = "block";
-													return false;
-												} else if (isNaN(giaNhap) || giaNhap <= 0) {
-													error.textContent = "Giá nhập chỉ chứa chữ số, không âm.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validatePriceImport(input) {
+                                                var giaNhap = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (giaNhap.length == 0 || giaNhap == null) {
+                                                    error.textContent = "Vui lòng nhập vào giá nhập.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else if (isNaN(giaNhap) || giaNhap <= 0) {
+                                                    error.textContent = "Giá nhập chỉ chứa chữ số, không âm.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateProviderName(input) {
-												var tenNCC = input.value;
-												var error = input.nextElementSibling;
-												if (tenNCC.length == 0 || tenNCC == null) {
-													error.textContent = "Vui lòng nhập vào tên nhà cung cấp.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
+                                            function validateProviderName(input) {
+                                                var tenNCC = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (tenNCC.length == 0 || tenNCC == null) {
+                                                    error.textContent = "Vui lòng nhập vào tên nhà cung cấp.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-											function validateProviderAddress(input) {
-												var diaChiNCC = input.value;
-												var error = input.nextElementSibling;
-												if (diaChiNCC.length == 0 || diaChiNCC == null) {
-													error.textContent = "Vui lòng nhập vào địa chỉ nhà cung cấp.";
-													error.style.display = "block";
-													return false;
-												} else {
-													error.style.display = "none";
-													return true;
-												}
-											}
-											function validateForm() {
-												var isValid = true;
-												var productFields = document.querySelectorAll('.product-fields');
-												productFields.forEach(function(product) {
-													var inputs = product.querySelectorAll('input, textarea');
-													inputs.forEach(function(input) {
-														var valid = true;
-														if (input.type === 'text') {
-															if (input.name === 'product-name[]') valid = validateName(input);
-															else if (input.name === 'product-price[]') valid = validatePrice(input);
-															else if (input.name === 'product-weight[]') valid = validateWeight(input);
-															else if (input.name === 'product-Batch-name[]') valid = validateNameBatch(input);
-															else if (input.name === 'product-Batch-quantity[]') valid = validateQuantity(input);
-															else if (input.name === 'product-priceImport[]') valid = validatePriceImport(input);
-															else if (input.name === 'providerName[]') valid = validateProviderName(input);
-															else if (input.name === 'providerAddress[]') valid = validateProviderAddress(input);
-														} else if (input.type === 'date') {
-															if (input.name === 'manufacturingDate[]') valid = validateNgaySX(input);
-															else if (input.name === 'expiryDate[]') valid = validateNgayHetHan(input);
-															else if (input.name === 'dateOfImporting[]') valid = validateNgayNhapHang(input);
-														} else if (input.type === 'file') {
-															if (input.name === 'product-image[]') valid = validateImage(input);
-															else if (input.name === 'product-listimage[]') valid = validateListImage(input);
-														} else if (input.tagName === 'TEXTAREA') {
-															valid = validateDescription(input);
-														}
-														if (!valid) isValid = false;
-													});
-												});
-												return isValid;
-											}
-											document.getElementById('productForm').addEventListener('submit', function(event) {
-												var productsAdded = document.querySelectorAll('.product-fields').length > 0; // Kiểm tra có sản phẩm được thêm vào hay không
-												if (!productsAdded) {
-													document.getElementById('errorMessage').style.display = 'block';
-													event.preventDefault(); // Ngăn không submit form
-												} else {
-													document.getElementById('errorMessage').style.display = 'none';
-													if (!validateForm()) {
-														event.preventDefault(); // Ngăn không submit form nếu dữ liệu không hợp lệ
-													}
-												}
-											});
+                                            function validateProviderAddress(input) {
+                                                var diaChiNCC = input.value;
+                                                var error = input.nextElementSibling;
+                                                if (diaChiNCC.length == 0 || diaChiNCC == null) {
+                                                    error.textContent = "Vui lòng nhập vào địa chỉ nhà cung cấp.";
+                                                    error.style.display = "block";
+                                                    return false;
+                                                } else {
+                                                    error.style.display = "none";
+                                                    return true;
+                                                }
+                                            }
 
-										</script>
+                                            function validateForm() {
+                                                var isValid = true;
+                                                var productFields = document.querySelectorAll('.product-fields');
+                                                productFields.forEach(function (product) {
+                                                    var inputs = product.querySelectorAll('input, textarea');
+                                                    inputs.forEach(function (input) {
+                                                        var valid = true;
+                                                        if (input.type === 'text') {
+                                                            if (input.name === 'product-name[]') valid = validateName(input);
+                                                            else if (input.name === 'product-price[]') valid = validatePrice(input);
+                                                            else if (input.name === 'product-weight[]') valid = validateWeight(input);
+                                                            else if (input.name === 'product-Batch-name[]') valid = validateNameBatch(input);
+                                                            else if (input.name === 'product-Batch-quantity[]') valid = validateQuantity(input);
+                                                            else if (input.name === 'product-priceImport[]') valid = validatePriceImport(input);
+                                                            else if (input.name === 'providerName[]') valid = validateProviderName(input);
+                                                            else if (input.name === 'providerAddress[]') valid = validateProviderAddress(input);
+                                                        } else if (input.type === 'date') {
+                                                            if (input.name === 'manufacturingDate[]') valid = validateNgaySX(input);
+                                                            else if (input.name === 'expiryDate[]') valid = validateNgayHetHan(input);
+                                                            else if (input.name === 'dateOfImporting[]') valid = validateNgayNhapHang(input);
+                                                        } else if (input.type === 'file') {
+                                                            if (input.name === 'product-image[]') valid = validateImage(input);
+                                                            else if (input.name === 'product-listimage[]') valid = validateListImage(input);
+                                                        } else if (input.tagName === 'TEXTAREA') {
+                                                            valid = validateDescription(input);
+                                                        }
+                                                        if (!valid) isValid = false;
+                                                    });
+                                                });
+                                                return isValid;
+                                            }
 
-										<script>
-											function previewMainImage(event) {
-												const file = event.target.files[0];
-												const preview = document.getElementById('mainImagePreview');
-												preview.innerHTML = '';
+                                            document.getElementById('productForm').addEventListener('submit', function (event) {
+                                                var productsAdded = document.querySelectorAll('.product-fields').length > 0; // Kiểm tra có sản phẩm được thêm vào hay không
+                                                if (!productsAdded) {
+                                                    document.getElementById('errorMessage').style.display = 'block';
+                                                    event.preventDefault(); // Ngăn không submit form
+                                                } else {
+                                                    document.getElementById('errorMessage').style.display = 'none';
+                                                    if (!validateForm()) {
+                                                        event.preventDefault(); // Ngăn không submit form nếu dữ liệu không hợp lệ
+                                                    }
+                                                }
+                                            });
 
-												if (file) {
-													const reader = new FileReader();
-													reader.onload = function(e) {
-														const imgContainer = document.createElement('div');
-														imgContainer.style.position = 'relative';
-														imgContainer.style.display = 'inline-block';
+                                        </script>
 
-														const img = document.createElement('img');
-														img.src = e.target.result;
-														img.style.maxWidth = '100%';
-														img.style.height = 'auto';
+                                        <script>
+                                            function previewMainImage(event) {
+                                                const file = event.target.files[0];
+                                                const preview = document.getElementById('mainImagePreview');
+                                                preview.innerHTML = '';
 
-														const removeButton = document.createElement('button');
-														removeButton.innerText = 'X';
-														removeButton.style.position = 'absolute';
-														removeButton.style.top = '10px';
-														removeButton.style.right = '10px';
-														removeButton.style.backgroundColor = 'red';
-														removeButton.style.color = 'white';
-														removeButton.style.border = 'none';
-														removeButton.style.borderRadius = '50%';
-														removeButton.style.cursor = 'pointer';
-														removeButton.onclick = function() {
-															preview.innerHTML = '';
-															event.target.value = ''; // Clear the input file
-														};
+                                                if (file) {
+                                                    const reader = new FileReader();
+                                                    reader.onload = function (e) {
+                                                        const imgContainer = document.createElement('div');
+                                                        imgContainer.style.position = 'relative';
+                                                        imgContainer.style.display = 'inline-block';
 
-														imgContainer.appendChild(img);
-														imgContainer.appendChild(removeButton);
-														preview.appendChild(imgContainer);
-													};
-													reader.readAsDataURL(file);
-												}
-											}
+                                                        const img = document.createElement('img');
+                                                        img.src = e.target.result;
+                                                        img.style.maxWidth = '100%';
+                                                        img.style.height = 'auto';
 
-											function previewListImages(event) {
-												const files = event.target.files;
-												const preview = document.getElementById('listImagesPreview');
-												preview.innerHTML = '';
+                                                        const removeButton = document.createElement('button');
+                                                        removeButton.innerText = 'X';
+                                                        removeButton.style.position = 'absolute';
+                                                        removeButton.style.top = '10px';
+                                                        removeButton.style.right = '10px';
+                                                        removeButton.style.backgroundColor = 'red';
+                                                        removeButton.style.color = 'white';
+                                                        removeButton.style.border = 'none';
+                                                        removeButton.style.borderRadius = '50%';
+                                                        removeButton.style.cursor = 'pointer';
+                                                        removeButton.onclick = function () {
+                                                            preview.innerHTML = '';
+                                                            event.target.value = ''; // Clear the input file
+                                                        };
 
-												for (let i = 0; i < files.length; i++) {
-													const file = files[i];
-													if (file) {
-														const reader = new FileReader();
-														reader.onload = function(e) {
-															const imgContainer = document.createElement('div');
-															imgContainer.style.position = 'relative';
-															imgContainer.style.display = 'inline-block';
-															imgContainer.style.margin = '5px';
+                                                        imgContainer.appendChild(img);
+                                                        imgContainer.appendChild(removeButton);
+                                                        preview.appendChild(imgContainer);
+                                                    };
+                                                    reader.readAsDataURL(file);
+                                                }
+                                            }
 
-															const img = document.createElement('img');
-															img.src = e.target.result;
-															img.style.maxWidth = '100%';
-															img.style.height = 'auto';
+                                            function previewListImages(event) {
+                                                const files = event.target.files;
+                                                const preview = document.getElementById('listImagesPreview');
+                                                preview.innerHTML = '';
 
-															const removeButton = document.createElement('button');
-															removeButton.innerText = 'X';
-															removeButton.style.position = 'absolute';
-															removeButton.style.top = '10px';
-															removeButton.style.right = '10px';
-															removeButton.style.backgroundColor = 'red';
-															removeButton.style.color = 'white';
-															removeButton.style.border = 'none';
-															removeButton.style.borderRadius = '50%';
-															removeButton.style.cursor = 'pointer';
-															removeButton.onclick = function() {
-																preview.removeChild(imgContainer);
-																// Remove the corresponding file from the input
-																const dataTransfer = new DataTransfer();
-																Array.from(event.target.files).forEach((file, index) => {
-																	if (index !== i) {
-																		dataTransfer.items.add(file);
-																	}
-																});
-																event.target.files = dataTransfer.files;
-															};
+                                                for (let i = 0; i < files.length; i++) {
+                                                    const file = files[i];
+                                                    if (file) {
+                                                        const reader = new FileReader();
+                                                        reader.onload = function (e) {
+                                                            const imgContainer = document.createElement('div');
+                                                            imgContainer.style.position = 'relative';
+                                                            imgContainer.style.display = 'inline-block';
+                                                            imgContainer.style.margin = '5px';
 
-															imgContainer.appendChild(img);
-															imgContainer.appendChild(removeButton);
-															preview.appendChild(imgContainer);
-														};
-														reader.readAsDataURL(file);
-													}
-												}
-											}
+                                                            const img = document.createElement('img');
+                                                            img.src = e.target.result;
+                                                            img.style.maxWidth = '100%';
+                                                            img.style.height = 'auto';
 
-										</script>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div></body>
+                                                            const removeButton = document.createElement('button');
+                                                            removeButton.innerText = 'X';
+                                                            removeButton.style.position = 'absolute';
+                                                            removeButton.style.top = '10px';
+                                                            removeButton.style.right = '10px';
+                                                            removeButton.style.backgroundColor = 'red';
+                                                            removeButton.style.color = 'white';
+                                                            removeButton.style.border = 'none';
+                                                            removeButton.style.borderRadius = '50%';
+                                                            removeButton.style.cursor = 'pointer';
+                                                            removeButton.onclick = function () {
+                                                                preview.removeChild(imgContainer);
+                                                                // Remove the corresponding file from the input
+                                                                const dataTransfer = new DataTransfer();
+                                                                Array.from(event.target.files).forEach((file, index) => {
+                                                                    if (index !== i) {
+                                                                        dataTransfer.items.add(file);
+                                                                    }
+                                                                });
+                                                                event.target.files = dataTransfer.files;
+                                                            };
+
+                                                            imgContainer.appendChild(img);
+                                                            imgContainer.appendChild(removeButton);
+                                                            preview.appendChild(imgContainer);
+                                                        };
+                                                        reader.readAsDataURL(file);
+                                                    }
+                                                }
+                                            }
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
 

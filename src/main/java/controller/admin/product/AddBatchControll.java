@@ -20,6 +20,7 @@ public class AddBatchControll extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             request.setCharacterEncoding("utf-8");
             response.setContentType("text/html;charset=UTF-8");
+            request.setAttribute("page", "addBatch");
             request.getRequestDispatcher("WEB-INF/admin/add-existProduct.jsp").forward(request, response);
         }
 
