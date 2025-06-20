@@ -9,9 +9,10 @@ import java.io.IOException;
 public class LoadProductsPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-               request.setCharacterEncoding("utf-8");
-               response.setContentType("text/html;charset=utf-8");
-               request.getRequestDispatcher("WEB-INF/admin/show-product.jsp").forward(request,response);
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+        request.setAttribute("page", "addNew");
+        request.getRequestDispatcher("WEB-INF/admin/show-product.jsp").forward(request, response);
     }
 
     @Override

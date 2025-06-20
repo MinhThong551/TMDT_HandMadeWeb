@@ -5,11 +5,79 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Danh Sách Người Dùng</title>
+	<title>Danh Sách Sản Phẩm</title>
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 	<style>
+		body,
+		.container-scroller,
+		.content-wrapper,
+		.main-panel,
+		.card,
+		.card-title,
+		.navbar,
+		.sidebar,
+		.table,
+		.footer {
+			background-color: #ffffff !important;
+			color: #000000 !important;
+		}
+
+		.bg-gray-dark {
+			background-color: #f0f0f0 !important;
+			color: #000000 !important;
+		}
+
+		.text-muted {
+			color: #666666 !important;
+		}
+
+		.btn,
+		.btn-success,
+		.btn-danger,
+		.btn-warning {
+			color: white !important;
+		}
+
+		.sidebar,
+		.navbar {
+			background-color: #eaeaea !important;
+		}
+
+		.modal-contents {
+			background-color: #ffffff !important;
+			color: #000000 !important;
+		}
+
+		input,
+		select,
+		textarea {
+			background-color: #ffffff !important;
+			color: #000000 !important;
+			border: 1px solid #ccc;
+		}
+
+		a {
+			color: #007bff !important;
+		}
+
+		a:hover {
+			color: #0056b3 !important;
+		}
+		.icon-box-success {
+			background-color: #d4edda !important;
+			color: #155724 !important;
+		}
+
+		.icon-box-danger {
+			background-color: #f8d7da !important;
+			color: #721c24 !important;
+		}
+
+		.icon-item {
+			color: #000 !important;
+		}
 
 		table.dataTable thead th {
 			background-color: #343a40; /* Màu nền của tiêu đề cột */
