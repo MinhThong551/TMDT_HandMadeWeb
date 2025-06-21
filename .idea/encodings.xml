@@ -4,8 +4,15 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/MomoPaymentSuccessControll.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/MomoReturnController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/PaypalPaymentServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/PaypalPaymentSuccessControll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/VnpayPaymentServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/VnpayPaymentSuccessControll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/client/order/VnpayReturnServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/util/MomoConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/util/PayPalConfig.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/util/PaymentRequest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/util/VnpayConfig.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

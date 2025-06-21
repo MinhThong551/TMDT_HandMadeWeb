@@ -270,6 +270,15 @@
                                         <label for="momo">Thanh toán qua Ví MoMo</label>
                                     </div>
 
+                                    <div class="radio-item">
+                                        <input type="radio" id="vnpay" name="paymentMethod" value="vnpay">
+                                        <label for="vnpay">Thanh toán qua VNPAY</label>
+                                    </div>
+
+                                    <div class="radio-item">
+                                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                        <label for="paypal">Thanh toán qua Paypal</label>
+                                    </div>
                                 </div>
                                 <div class="error-message" id="payment-error"></div>
                             </div>
@@ -312,10 +321,13 @@
         const credit = document.getElementById('credit');
         const cod = document.getElementById('cod');
         const momo = document.getElementById('momo');
+        const vnpay = document.getElementById('vnpay');
+        const paypal = document.getElementById('paypal');
+
         const paymentError = document.getElementById('payment-error');
         let valid = true;
 
-        if (!(qr.checked || cod.checked || momo.checked)) {
+        if (!(qr.checked || cod.checked || momo.checked || vnpay.checked  || paypal.checked)) {
             paymentError.textContent = 'Vui lòng chọn một hình thức thanh toán';
             valid = false;
         } else {
@@ -329,6 +341,7 @@
         return valid;
 
     }
+    <script src="https://www.paypal.com/sdk/js?client-id=Abo90Wztq8vanhzw0EO5zMhum7b1O6aI_1x4BTA8v7jqNIOGdthWxF-ZZpjhtEGg6CW0VWRdgg_hjdlb&currency=USD"></script>
 
 </script>
 </body>
