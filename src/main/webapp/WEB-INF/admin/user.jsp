@@ -159,10 +159,10 @@
         }
 
         .change-role{
-            background-color: #5f74af;
+            background-color: #505050;
             color: #ffffff;
             padding: 3px;
-            border-radius: 20px;
+            border-radius: 5px;
             border: none;
         }
     </style>
