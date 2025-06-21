@@ -150,9 +150,9 @@
         }
 
         .tab.active {
-            background-color: #232323;
-            border-bottom: 2px solid #37e737;
-            color: #37e737;
+            background-color: #343a40;
+            border-bottom: 2px solid rgba(34, 45, 50, 0.38);
+            color: #ffffff;
         }
 
         .table-section {

@@ -80,8 +80,8 @@
 
         /* Custom styles for DataTables */
         table.dataTable thead th {
-            background-color: #ffffff; /* Header background color */
-            color: #000000; /* Header text color */
+            background-color: #343a40; /* Header background color */
+            color: #ffffff; /* Header text color */
         }
 
         table.dataTable tbody td {
@@ -119,9 +119,9 @@
         }
 
         .tab.active {
-            background-color: #232323;
-            border-bottom: 2px solid #37e737;
-            color: #37e737;
+            background-color: #343a40;
+            border-bottom: 2px solid rgba(34, 45, 50, 0.38);
+            color: #ffffff;
         }
 
         .table-section {
@@ -210,7 +210,7 @@
 
         #voucherForm button {
             /*margin-right:;*/
-            background-color: #00d25b;
+            background-color: #00ffff;
             color: white;
             border: none;
             cursor: pointer;
