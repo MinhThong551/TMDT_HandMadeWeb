@@ -54,8 +54,40 @@ public class    PaymentInsertControll extends HttpServlet {
                     request.setAttribute("qrUrl", qrPath);// hoặc link ảnh
                     request.getRequestDispatcher("/WEB-INF/client/momo_qr.jsp").forward(request, response);
 
-                    return;
-                } else {
+                }else if (paymentMethodParam.equals("vnpay")) {
+                    paymentId = 5;
+
+                    Payment payment = new Payment();
+                    payment.setId(paymentId);
+                    order.setPayment(payment);
+
+                    // Lưu tạm
+                    session.setAttribute("vnpay_order", order);
+                    session.setAttribute("vnpay_orderDetail", orderDetail);
+
+                    // Forward tới trang hiển thị QR giả
+                    String qrPath = "/images/vnpay-qr-fake.png"; // ảnh bạn có
+                    request.setAttribute("qrUrl", qrPath);
+                    request.getRequestDispatcher("/WEB-INF/client/vnpay_qr.jsp").forward(request, response);
+                } else if (paymentMethodParam.equals("paypal")) {
+                        paymentId = 6; // bạn tự gán mã
+
+                        Payment payment = new Payment();
+                        payment.setId(paymentId);
+                        order.setPayment(payment);
+
+                        // Lưu tạm thông tin đơn hàng
+                        session.setAttribute("paypal_order", order);
+                        session.setAttribute("paypal_orderDetail", orderDetail);
+
+                        // Chuyển hướng sang servlet PayPal
+                        response.sendRedirect(request.getContextPath() + "/paypal-payment");
+                        return;
+
+
+
+
+             } else {
                     throw new IllegalArgumentException("Phương thức thanh toán không hợp lệ");
                 }
 
