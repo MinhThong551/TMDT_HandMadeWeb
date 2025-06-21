@@ -10,6 +10,11 @@
     .sidebar .sidebar-brand-wrapper {
         background: #FFFFFF; !important;
     }
+    .sidebar .nav .nav-item.active > .nav-link
+    {
+        background: #343a40;
+    }
+
     .sidebar .sidebar-brand-wrapper .sidebar-brand img {
         max-width: 100%;
         margin: auto;
