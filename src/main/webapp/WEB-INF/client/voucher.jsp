@@ -54,7 +54,7 @@
             display: inline-block;
             padding: 0px 10px;
             /*border-radius: 5px;*/
-            background-color: #7fad39;
+            background-color: #17c6c6;
             color: #fff;
             text-decoration: none;
             cursor: pointer;
