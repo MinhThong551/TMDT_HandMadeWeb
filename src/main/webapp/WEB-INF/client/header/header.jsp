@@ -14,8 +14,8 @@
         padding: 35px 0;
     }
 
-    .header__cart ul li:hover > a {
-        color: #17c6c6;
+    .header__cart ul li:hover>a {
+        color: #17c6c6; !important;
     }
 
     .header__cart ul li a span {
@@ -195,11 +195,11 @@
                         <span>Những loại handmade</span>
                     </div>
                     <ul>
-                        <li><a href="#">Hoa </a></li>
                         <li><a href="#">Kẹp tóc</a></li>
+                        <li><a href="#">Chậu hoa</a></li>
+                        <li><a href="#">Hoa </a></li>
                         <li><a href="#">Ốp lưng</a></li>
                         <li><a href="#">Ốp gương</a></li>
-                        <li><a href="#">Chậu hoa</a></li>
                         <li><a href="#">Vịt bông</a></li>
                         <li><a href="#">Bìa sách</a></li>
                         <li><a href="#">Móc khoá</a></li>

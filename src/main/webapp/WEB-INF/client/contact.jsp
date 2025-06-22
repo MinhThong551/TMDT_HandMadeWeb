@@ -18,7 +18,7 @@
     <jsp:include page="link/link.jsp"></jsp:include>
     <style>
         .paging a .active{
-            color: #00a045;
+            color: #008787;
             font-weight: bold;
         }
         /*.header__fixed{*/
@@ -40,7 +40,7 @@
         }
 
         .paging button.active {
-            background-color: #7fad39;
+            background-color: #17c6c6;
             color: whitesmoke;
         }
 
@@ -89,7 +89,7 @@
                 <div class="contact__widget">
                     <span class="icon_pin_alt"></span>
                     <h4>Address</h4>
-                    <p>60-49 Road 11378 New York</p>
+                    <p>Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -114,19 +114,20 @@
 <!-- Map Begin -->
 <div class="map">
     <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.187699181049!2d106.80087177579657!3d10.870014189287555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d93c67c657c9%3A0xd2b7c99ce1e5c2d6!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOw7RuZyBMw6JtIFRIUC5IQ00!5e0!3m2!1svi!2s!4v1718997323054!5m2!1svi!2s"
             height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <div class="map-inside">
         <i class="icon_pin"></i>
         <div class="inside-widget">
-            <h4>New York</h4>
+            <h4>ĐH Nông Lâm TP.HCM</h4>
             <ul>
-                <li>Phone: +12-345-6789</li>
-                <li>Add: 16 Creek Ave. Farmingdale, NY</li>
+                <li>Phone: +84-28-3896-6780</li>
+                <li>Add: Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</li>
             </ul>
         </div>
     </div>
 </div>
+
 <!-- Map End -->
 
 <!-- Contact Form Begin -->
@@ -167,8 +168,8 @@
                         <a href="./IndexControll"><img src="/assets/img/logo1.png" alt=""></a>
                     </div>
                     <ul>
-                        <li>Address: 60-49 Road 11378 New York</li>
-                        <li>Phone: +65 11.188.888</li>
+                        <li>Phone: +84-28-3896-6780</li>
+                        <li>Add: Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</li>
                         <li>Email: hello@colorlib.com</li>
                     </ul>
                 </div>

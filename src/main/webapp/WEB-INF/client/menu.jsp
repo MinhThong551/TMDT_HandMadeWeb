@@ -20,7 +20,7 @@
     <jsp:include page="link/link.jsp"></jsp:include>
     <style>
         .paging a .active {
-            color: #00a045;
+            color: #008787;
             font-weight: bold;
         }
 
@@ -45,7 +45,7 @@
         }
 
         .page-item.active .page-link {
-            background-color: #7fad39;
+            background-color: #17c6c6;
             color: white; /* Đổi màu chữ nếu cần */
         }
 
@@ -185,7 +185,7 @@
         }
 
         button[type="button"] {
-            background-color: #8fbe41;
+            background-color: #17c6c6;
             color: white;
             padding: 15px 20px;
             border: none;
@@ -195,7 +195,7 @@
         }
 
         button[type="button"]:hover {
-            background-color: #94c94d;
+            background-color: #17c6c6;
         }
 
         .product__pagination {
@@ -217,7 +217,7 @@
 		}
 
 		button[type="button"] {
-			background-color: #8fbe41;
+			background-color: #17c6c6;
 			color: white;
 			padding: 15px 20px;
 			border: none;
@@ -226,7 +226,7 @@
 			border-radius: 30px;
 		}
 		button[type="button"]:hover {
-			background-color: #94c94d;
+			background-color: #17c6c6;
 		}
 
 
@@ -245,7 +245,7 @@
 			padding: 10px 23px;
 			border-radius: 30px;
 			border: none;
-			background-color: #7fad39;
+			background-color: #17c6c6;
 			font-weight: 700;
 			color: #ffffff;
 			margin-top: 7px; /* Khoảng cách trên giữa nút và văn bản */
@@ -298,6 +298,11 @@
 
 
         }
+        .btn-success {
+            color: #fff;
+            background-color: #008787;
+            border-color: #008787;
+        }
 	</style>
 
 </head>
@@ -338,17 +343,17 @@
                     <div class="sidebar__item">
                         <h4>Những loại rau quả</h4>
                         <ul>
-
-                            <li><a href="#">Rau xanh lá</a></li>
-                            <li><a href="#">Quả dâu</a></li>
-                            <li><a href="#">Quả lựu</a></li>
-                            <li><a href="#">Quả lê</a></li>
-                            <li><a href="#">Quả táo</a></li>
-                            <li><a href="#">Cà chua</a></li>
-                            <li><a href="#">Cà rốt</a></li>
-                            <li><a href="#">Bí đỏ</a></li>
-                            <li><a href="#">Bơ</a></li>
-                            <li><a href="#">Cải bắp cải</a></li>
+                            <li><a href="#">Kẹp tóc</a></li>
+                            <li><a href="#">Chậu hoa</a></li>
+                            <li><a href="#">Hoa </a></li>
+                            <li><a href="#">Ốp lưng</a></li>
+                            <li><a href="#">Ốp gương</a></li>
+                            <li><a href="#">Vịt bông</a></li>
+                            <li><a href="#">Bìa sách</a></li>
+                            <li><a href="#">Móc khoá</a></li>
+                            <li><a href="#">Túi sách</a></li>
+                            <li><a href="#">Hoa dạng dây</a></li>
+                            <li><a href="#">Hoa hình thú</a></li>
                         </ul>
                     </div>
                     <div class="sidebar__item sidebar__item__color--option">
@@ -463,7 +468,7 @@
 											<div class="product__discount__percent">-20%</div>
 										</div>
 										<div class="product__discount__item__text">
-											<span>Dried Fruit</span>
+											<span>Phụ kiện trang trí</span>
 											<h5><a href="${detail}?pid=${b.id}">${b.name}</a></h5>
 											<div class="product__item__price">${b.price} <span>$30.00</span></div>
 										</div>
@@ -534,7 +539,7 @@
                                                     data-product-id="${o.id}"
                                                     data-product-name="${o.name}"
                                                     data-product-image="${o.image}"
-                                                    style="padding: 10px 23px; border-radius: 30px; border: none; background-color: #7fad39; font-weight: 700; color: #ffffff">
+                                                    style="padding: 10px 23px; border-radius: 30px; border: none; background-color: #17c6c6; font-weight: 700; color: #ffffff">
                                                 MUA NGAY
                                             </button>
                                         </form>

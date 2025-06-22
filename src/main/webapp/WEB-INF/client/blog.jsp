@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+         pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 
 <!DOCTYPE html>
@@ -16,7 +16,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
     <jsp:include page="link/link.jsp"></jsp:include>
+    <style>
 
+    </style>
 </head>
 
 <body>
@@ -59,11 +61,12 @@
                     <div class="blog__sidebar__item">
                         <h4>Categories</h4>
                         <ul>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Beauty (20)</a></li>
-                            <li><a href="#">Food (5)</a></li>
-                            <li><a href="#">Life Style (9)</a></li>
-                            <li><a href="#">Travel (10)</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=0">Tất cả</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=1">Hoa</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=2">Kẹp tóc</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=3">Ốp lưng</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=4">Gấu bông</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=4">Chậu hoa</a></li>
                         </ul>
                     </div>
                     <div class="blog__sidebar__item">
@@ -71,29 +74,29 @@
                         <div class="blog__sidebar__recent">
                             <a href="#" class="blog__sidebar__recent__item">
                                 <div class="blog__sidebar__recent__item__pic">
-                                    <img src="assets/img/blog/sidebar/sr-1.jpg" alt="">
+                                    <img src="images/product14.jpg" alt="" style="height: 100px; width: 100px">
                                 </div>
                                 <div class="blog__sidebar__recent__item__text">
-                                    <h6>09 Kinds Of Vegetables<br /> Protect The Liver</h6>
-                                    <span>MAR 05, 2019</span>
+                                    <h6>09 Mẫu Móc Khoá Len<br/> Được Yêu Thích Nhất</h6>
+                                    <span>JUN 20, 2024</span>
                                 </div>
                             </a>
                             <a href="#" class="blog__sidebar__recent__item">
                                 <div class="blog__sidebar__recent__item__pic">
-                                    <img src="assets/img/blog/sidebar/sr-2.jpg" alt="">
+                                    <img src="images/product15.jpg" alt="" style="height: 100px; width: 100px">
                                 </div>
                                 <div class="blog__sidebar__recent__item__text">
-                                    <h6>Tips You To Balance<br /> Nutrition Meal Day</h6>
-                                    <span>MAR 05, 2019</span>
+                                    <h6>Tips Giúp Bảo Quản<br/> Đồ Handmade Lâu Bền</h6>
+                                    <span>JUN 15, 2024</span>
                                 </div>
                             </a>
                             <a href="#" class="blog__sidebar__recent__item">
                                 <div class="blog__sidebar__recent__item__pic">
-                                    <img src="assets/img/blog/sidebar/sr-3.jpg" alt="">
+                                    <img src="images/product16.jpg" alt="" style="height: 100px; width: 100px">
                                 </div>
                                 <div class="blog__sidebar__recent__item__text">
-                                    <h6>4 Principles Help You Lose <br />Weight With Vegetables</h6>
-                                    <span>MAR 05, 2019</span>
+                                    <h6>4 Gợi Ý Tự Làm Quà Tặng<br/> Handmade Ý Nghĩa</h6>
+                                    <span>JUN 10, 2024</span>
                                 </div>
                             </a>
                         </div>
@@ -101,12 +104,11 @@
                     <div class="blog__sidebar__item">
                         <h4>Search By</h4>
                         <div class="blog__sidebar__item__tags">
-                            <a href="#">Apple</a>
-                            <a href="#">Beauty</a>
-                            <a href="#">Vegetables</a>
-                            <a href="#">Fruit</a>
-                            <a href="#">Healthy Food</a>
-                            <a href="#">Lifestyle</a>
+                            <a href="#">Hoa</a>
+                            <a href="#">Kẹp tóc</a>
+                            <a href="#">Ốp lưng</a>
+                            <a href="#">Gấu bông</a>
+                            <a href="#">Chậu hoa</a>
                         </div>
                     </div>
                 </div>
@@ -116,102 +118,96 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-2.jpg" alt="">
+                                <img src="images/product14.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> Jun 1, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 8</li>
                                 </ul>
-                                <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">6 cách gói quà handmade độc đáo</a></h5>
+                                <p>Khám phá những cách gói quà thủ công sáng tạo giúp món quà trở nên tinh tế và ấn tượng hơn.</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-3.jpg" alt="">
+                                <img src="images/product13.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> May 28, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 12</li>
                                 </ul>
-                                <h5><a href="#">Visit the clean farm in the US</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">Thăm xưởng làm đồ handmade tại TP.HCM</a></h5>
+                                <p>Cùng tham quan một xưởng thủ công nhỏ và tìm hiểu quá trình tạo ra sản phẩm bằng tay đầy tâm huyết.</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-1.jpg" alt="">
+                                <img src="images/product6.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> May 20, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 7</li>
                                 </ul>
-                                <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">Mẹo làm thiệp chúc mừng bằng tay đơn giản</a></h5>
+                                <p>Tự tay làm những tấm thiệp chúc mừng đẹp mắt chỉ với giấy màu, kéo và một chút sáng tạo.</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-4.jpg" alt="">
+                                <img src="images/product5.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> May 14, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 6</li>
                                 </ul>
-                                <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">Tự làm móc khoá len cực dễ thương</a></h5>
+                                <p>Hướng dẫn chi tiết cách móc một chiếc móc khoá len mini, dễ làm và thích hợp làm quà tặng.</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-4.jpg" alt="">
+                                <img src="images/product3.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> May 5, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 9</li>
                                 </ul>
-                                <h5><a href="#">The Moment You Need To Remove Garlic From The Menu</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">Thời điểm thích hợp để thay đổi mẫu handmade</a></h5>
+                                <p>Làm mới bộ sưu tập handmade theo mùa và xu hướng – bạn đã thử chưa?</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="assets/img/blog/blog-6.jpg" alt="">
+                                <img src="images/product2.jpg" alt="">
                             </div>
                             <div class="blog__item__text">
                                 <ul>
-                                    <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                    <li><i class="fa fa-calendar-o"></i> Apr 28, 2024</li>
+                                    <li><i class="fa fa-comment-o"></i> 4</li>
                                 </ul>
-                                <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <h5><a href="#">Hướng dẫn chăm sóc đồ handmade đúng cách</a></h5>
+                                <p>Lưu giữ đồ handmade lâu dài và luôn như mới nhờ những bí quyết đơn giản này.</p>
+                                <a href="#" class="blog__btn">XEM THÊM <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -241,7 +237,6 @@
 <script src="assets/js/mixitup.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
-
 
 
 </body>

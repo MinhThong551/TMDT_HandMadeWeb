@@ -44,7 +44,7 @@
 
 
 <div class="container">
-    <div class="hero__item set-bg" data-setbg="assets/img/banner.png">
+    <div class="hero__item set-bg" data-setbg="assets/img/banner/banner-5.png">
         <div class="hero__text">
             <span>ĐỒ HANDMADE TINH TẾ</span>
             <h2>Móc khoá & Quà tặng<br/>100% Thủ công</h2>
