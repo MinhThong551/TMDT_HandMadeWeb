@@ -128,6 +128,7 @@
                                     </c:if>--%>
                     <li><a href="./BlogControll">Blog</a></li>
                     <li><a href="./ContactControll">Liên hệ</a></li>
+                    <li><a href="./custom1">Custom</a></li>
                 </ul>
             </nav>
         </div>

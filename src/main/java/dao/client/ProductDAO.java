@@ -231,22 +231,33 @@ public class ProductDAO {
     }
 
 
-    public static void insertProduct(Product product) {
-        String query = "insert INTO Products (id, name, price, image,description,category_id)\r\n"
-                + "values( ?, ?,?,?, ?,?)";
+    public static int insertProduct(Product product) {
+        int generatedId = -1;
+        String query = "INSERT INTO Products (name, price, image, description, category_id) VALUES (?, ?, ?, ?, ?)";
         try {
             Connection conn = JDBCUtil.getConnection();
-            PreparedStatement ps = conn.prepareStatement(query);
-            ps.setInt(1, product.getId());
-            ps.setString(2, product.getName());
-            ps.setDouble(3, product.getPrice());
-            ps.setString(4, product.getImage());
-            ps.setString(5, product.getDescription());
-            ps.setInt(6, product.getCategory().getId());
+            PreparedStatement ps = conn.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
+            ps.setString(1, product.getName());
+            ps.setDouble(2, product.getPrice());
+            ps.setString(3, product.getImage());
+            ps.setString(4, product.getDescription());
+            ps.setInt(5, product.getCategory().getId());
             ps.executeUpdate();
+
+            // Lấy ID được tạo tự động
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                generatedId = rs.getInt(1);
+            }
+            rs.close();
+            ps.close();
         } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Lỗi chi tiết: " + e.getMessage());
         }
+        return generatedId;
     }
+
 
     public static List<Product> relativeProduct(int id) {
         List<Product> list = new ArrayList<>();

@@ -20,17 +20,27 @@
     <listener-class>model.AppContextListener</listener-class>
   </listener>
 
-<!--  <servlet>
-    <servlet-name>ReviewControll</servlet-name>
-    <servlet-class>controller.client.product.ReviewControll</servlet-class>
+  <!-- Định nghĩa Servlet CustomProductController -->
+  <servlet>
+    <servlet-name>CustomProductController</servlet-name>
+    <servlet-class>controller.customProduct.CustomProductController</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>ReviewControll</servlet-name>
-    <url-pattern>/ReviewControll</url-pattern>
+    <servlet-name>CustomProductController</servlet-name>
+    <url-pattern>/custom1</url-pattern>
   </servlet-mapping>
 
-  Cấu hình welcome file -->
+  <!--  <servlet>
+      <servlet-name>ReviewControll</servlet-name>
+      <servlet-class>controller.client.product.ReviewControll</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>ReviewControll</servlet-name>
+      <url-pattern>/ReviewControll</url-pattern>
+    </servlet-mapping>
+
+    Cấu hình welcome file -->
   <welcome-file-list>
     <welcome-file>IndexControll</welcome-file>
   </welcome-file-list>
