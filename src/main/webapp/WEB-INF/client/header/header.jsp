@@ -10,6 +10,37 @@
         margin-right: 30px;
     }
 
+    .header__menu {
+        padding: 35px 0;
+    }
+
+    .header__cart ul li:hover > a {
+        color: #17c6c6;
+    }
+
+    .header__cart ul li a span {
+        background: #17c6c6;
+    }
+
+    .hero__search__phone__icon,
+    .hero__text span {
+        color: #17c6c6;
+    }
+
+    .hero__categories__all {
+        background: #17c6c6;
+        padding: 10px 2px 10px 40px;
+    !important;
+    }
+
+    .primary-btn {
+        background: #17c6c6;
+    !important;
+    }
+
+    .fb-customerchat {
+        background: #17c6c6;
+    }
     </style>
 
 </head>
@@ -113,10 +144,11 @@
                         <!-- Dropdown Menu for Product Categories -->
                         <ul class="header__menu__dropdown">
                             <li class=""><a href="./ShowProductControl?cid=0">Tất cả</a></li>
-                            <li class=""><a href="./ShowProductControl?cid=1">Rau lá</a></li>
-                            <li class=""><a href="./ShowProductControl?cid=2">Củ quả</a></li>
-                            <li class=""><a href="./ShowProductControl?cid=3">Trái cây</a></li>
-                            <li class=""><a href="./ShowProductControl?cid=4">Nấm</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=1">Hoa</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=2">Kẹp tóc</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=3">Ốp lưng</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=4">Gấu bông</a></li>
+                            <li class=""><a href="./ShowProductControl?cid=4">Chậu hoa</a></li>
 
                         </ul>
                     </li>
@@ -160,20 +192,20 @@
                 <div class="hero__categories">
                     <div class="hero__categories__all">
                         <i class="fa fa-bars"></i>
-                        <span>Những loại rau quả</span>
+                        <span>Những loại handmade</span>
                     </div>
                     <ul>
-                        <li><a href="#">Rau xanh lá</a></li>
-                        <li><a href="#">Quả dâu</a></li>
-                        <li><a href="#">Quả lựu</a></li>
-                        <li><a href="#">Quả lê</a></li>
-                        <li><a href="#">Quả táo</a></li>
-                        <li><a href="#">Cà chua</a></li>
-                        <li><a href="#">Cà rốt</a></li>
-                        <li><a href="#">Bí đỏ</a></li>
-                        <li><a href="#">Bơ</a></li>
-                        <li><a href="#">Dưa chuột</a></li>
-                        <li><a href="#">Cải bắp cải</a></li>
+                        <li><a href="#">Hoa </a></li>
+                        <li><a href="#">Kẹp tóc</a></li>
+                        <li><a href="#">Ốp lưng</a></li>
+                        <li><a href="#">Ốp gương</a></li>
+                        <li><a href="#">Chậu hoa</a></li>
+                        <li><a href="#">Vịt bông</a></li>
+                        <li><a href="#">Bìa sách</a></li>
+                        <li><a href="#">Móc khoá</a></li>
+                        <li><a href="#">Túi sách</a></li>
+                        <li><a href="#">Hoa dạng dây</a></li>
+                        <li><a href="#">Hoa hình thú</a></li>
                     </ul>
                 </div>
             </div>
