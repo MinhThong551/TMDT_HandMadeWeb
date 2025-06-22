@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #555;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select, input[type="number"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.product-image {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.json-output {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+strong {
+    color: #2c3e50;
+}
