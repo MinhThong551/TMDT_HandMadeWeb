@@ -20,10 +20,17 @@
     <!-- Css Styles -->
     <jsp:include page="client/link/link.jsp"></jsp:include>
     <style>
-        .container .row .col-lg-6 ul li{
+        .container .row .col-lg-6 ul li {
             margin-right: 30px;
         }
 
+        button {
+            background: #17c6c6;
+        }
+
+        .site-btn {
+            background: #17c6c6;
+        }
     </style>
 </head>
 
@@ -37,11 +44,11 @@
 
 
 <div class="container">
-    <div class="hero__item set-bg" data-setbg="assets/img/banner.jpeg">
+    <div class="hero__item set-bg" data-setbg="assets/img/banner.png">
         <div class="hero__text">
-            <span>TRÁI CÂY TƯƠI</span>
-            <h2>Rau quả <br />100% Hữu cơ</h2>
-            <p>Có sẵn nhận và giao hàng miễn phí</p>
+            <span>ĐỒ HANDMADE TINH TẾ</span>
+            <h2>Móc khoá & Quà tặng<br/>100% Thủ công</h2>
+            <p>Nhận đặt hàng và giao tận nơi miễn phí</p>
             <a href="./ShowProductControl" class="primary-btn">MUA HÀNG</a>
         </div>
     </div>
@@ -77,10 +84,10 @@
             </div>
         </div>
         <div class="row featured__filter" id="content">
-            <c:forEach items="${list4Rand}" var="o" >
+            <c:forEach items="${list4Rand}" var="o">
                 <div class="product col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat" style="height: 400px">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" >
+                        <div class="featured__item__pic set-bg">
                             <a href="${detail}?pid=${o.id}">
                                 <img src="${o.image}" alt="${o.name}">
                             </a>
@@ -94,7 +101,7 @@
                             <c:url var="addToCart" value="/AddToCartControl"></c:url>
                             <form action="${addToCart}?pid=${o.id}" method="post" enctype="multipart/form-data">
                                 <button
-                                        style="padding: 10px 23px; border-radius: 30px; border: none; background-color: #7fad39; font-weight: 700"
+                                        style="padding: 10px 23px; border-radius: 30px; border: none; background-color: #17c6c6; font-weight: 700"
                                         type="submit">
                                     <a href="${detail}?pid=${o.id}" style="color:#ffffff">
                                         MUA NGAY</a>
@@ -109,13 +116,14 @@
             <button onclick="loadMore()" class="btn-btn-primary"
                     style="padding: 10px
                     23px; border-radius: 5px; border: none; background-color: #ff6615; font-weight: 700;
-        color:white">Xem thêm</button>
+        color:white">Xem thêm
+            </button>
         </div>
-        <div class="row featured__filter" >
-            <c:forEach items="${listOutstandingProduct}" var="o" >
+        <div class="row featured__filter">
+            <c:forEach items="${listOutstandingProduct}" var="o">
                 <div class="product col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" >
+                        <div class="featured__item__pic set-bg">
                             <a href="${detail}?pid=${o.id}">
                                 <img src="${o.image}" alt="${o.name}">
                             </a>
@@ -142,7 +150,7 @@
             </c:forEach>
         </div>
 
-        </div>
+    </div>
     </div>
 </section>
 <!-- Featured Section End -->
@@ -153,129 +161,18 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="banner__pic">
-                    <img src="assets/img/banner/banner-1.jpg" alt="">
+                    <img src="assets/img/banner/banner-4.jpg" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="banner__pic">
-                    <img src="assets/img/banner/banner-2.jpg" alt="">
+                    <img src="assets/img/banner/banner-3.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Banner End -->
-
-<!-- Latest Product Section Begin -->
-<section class="latest-product spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="latest-product__text">
-                    <h4>Sản phẩm tươi</h4>
-                    <div class="latest-product__slider owl-carousel">
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-
-                        </div>
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="latest-product__text">
-                    <h4>Sản phẩm sạch</h4>
-                    <div class="latest-product__slider owl-carousel">
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-
-                        </div>
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="latest-product__text">
-                    <h4>Sản phẩm ngon</h4>
-                    <div class="latest-product__slider owl-carousel">
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-
-                        </div>
-                        <div class="latest-prdouct__slider__item">
-                            <c:forEach var="b" items="${listRandProduct}">
-                                <a href="${detail}?pid=${b.id}" class="latest-product__item">
-                                    <div class="latest-product__item__pic">
-                                        <img src="${b.image}" alt="">
-                                    </div>
-                                    <div class="latest-product__item__text">
-                                        <h6>${b.name}</h6>
-                                        <span>${b.price}</span>
-                                    </div>
-                                </a>
-                            </c:forEach>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Latest Product Section End -->
 
 <!-- Blog Section Begin -->
 <section class="from-blog spad">
@@ -291,48 +188,48 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="assets/img/blog/blog-1.jpg" alt="">
+                        <img src="assets/img/blog/blog-7.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> Tháng 4,2019</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Mẹo chọn hoa quả tươi ngon</a></h5>
-                        <p> Chọn hoa quả có màu sắc tươi sáng và đồng đều trên toàn bề mặt.
-                            Tránh chọn những loại hoa quả có vết nứt, sưng lên hoặc có dấu hiệu của vi khuẩn.</p>
+                        <h5><a href="#">Mẹo chọn đồ handmade chất lượng</a></h5>
+                        <p>Chọn sản phẩm có đường may chắc chắn, màu sắc đều và không có lỗi nhỏ như vết keo thừa hoặc
+                            chỉ thừa. Ưu tiên sản phẩm có thiết kế độc đáo và tinh tế.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="assets/img/blog/blog-2.jpg" alt="">
+                        <img src="assets/img/blog/blog-8.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> Tháng 4,2019</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Mẹo bảo quản hoa quả tươi lâu</a></h5>
-                        <p>Một số túi hoa quả được thiết kế để kiểm soát độ ẩm và khí,
-                            giúp giữ cho hoa quả tươi lâu hơn. Đặc biệt là các loại túi có thể hấp thụ ethylene. </p>
+                        <h5><a href="#">Bảo quản đồ handmade như thế nào?</a></h5>
+                        <p>Đối với sản phẩm làm từ len hoặc vải, nên bảo quản nơi khô ráo, tránh ẩm mốc. Tránh ánh nắng
+                            trực tiếp để sản phẩm không bị bạc màu hay biến dạng.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="assets/img/blog/blog-3.jpg" alt="">
+                        <img src="assets/img/blog/blog-7.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> Tháng 8,2019</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Ăn hoa quả đúng cách</a></h5>
-                        <p>Trước khi ăn, luôn rửa hoa quả dưới nước sạch để loại bỏ bụi bẩn,
-                            vi khuẩn và hóa chất bảo quản nếu có.</p>
+                        <h5><a href="#">Lý do bạn nên chọn quà tặng handmade</a></h5>
+                        <p>Đồ handmade mang ý nghĩa cá nhân hóa và thể hiện sự chăm chút trong từng chi tiết. Đây là lựa
+                            chọn hoàn hảo cho các dịp đặc biệt như sinh nhật, kỷ niệm hoặc lễ Tết.</p>
                     </div>
                 </div>
             </div>

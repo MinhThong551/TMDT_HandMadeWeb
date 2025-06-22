@@ -264,7 +264,7 @@
                 { data: 'role.roleName' },
                 {
                     data: null, render: function (data, type, row) {
-                        var iconClass = row.isLocked ? 'fa-lock-open' : 'fa-lock';
+                        var iconClass = row.isLocked ? 'fa-lock' : 'fa-lock-open';
                         var iconColor = row.isLocked ? 'color: green;' : 'color: #505050;';
                         return `<i class="fa ${iconClass} lock-toggle" data-id="${row.id}" data-status="${row.isLocked ? 'unlock' : 'lock'}" style="${iconColor}"></i>`;
                     }
